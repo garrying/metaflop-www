@@ -6,6 +6,8 @@ RUN mkdir /metaflop
 WORKDIR /metaflop
 COPY Gemfile /metaflop/Gemfile
 COPY Gemfile.lock /metaflop/Gemfile.lock
+COPY ./bin/sfnt2woff/sfnt2woff /usr/bin/sfnt2woff
+COPY ./bin/ttf2eot/ttf2eot /usr/bin/ttf2eot
 RUN bundle install
 COPY . /metaflop
 
