@@ -489,20 +489,6 @@ $(function() {
     return baseUrl + '/modulator/font/' + shortenendUrl;
   };
 
-  // share the current settings
-  // this function is called from flash clippy
-  $.fn.metaflop.getFlashShareUrl = function() {
-    var container = $('#action-share-url'); // eslint-disable-line no-unused-vars
-
-    if (!$.fn.metaflop.shortenendUrl) {
-      showProgress('Generating share url...');
-
-      callWithFontHash();
-    }
-
-    return getFontUrl($.fn.metaflop.shortenendUrl);
-  };
-
   $('#action-share-url a').click(function(e) {
     e.preventDefault();
     var $this = $(this);
