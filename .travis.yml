@@ -16,6 +16,7 @@ before_install:
 
   - cp config/db.travis-ci.yml config/db.yml
   - mysql -e 'CREATE DATABASE metaflop_test;'
+  - gem install bundler -v 1.16.2
 
 jobs:
   include:
