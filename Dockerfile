@@ -1,6 +1,7 @@
 FROM ruby:2.5
 RUN apt-get update && apt-get install fontforge -y \
     python-fontforge \
+    texlive \
     texlive-metapost
 RUN mkdir /metaflop
 WORKDIR /metaflop

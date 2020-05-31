@@ -2,15 +2,15 @@ db:
   development:
     adapter: mysql2
     encoding: utf8
-    host: localhost
-    username: user
+    host: db
+    username: root
     password: pw
     database: metaflop_development
 
   production:
     adapter: mysql2
     encoding: utf8
-    host: localhost
-    username: user
+    host: db
+    username: root
     password: pw
     database: metaflop_production

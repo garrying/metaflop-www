@@ -4,17 +4,14 @@ services:
   pma:
     image: phpmyadmin/phpmyadmin
     environment:
-      # https://docs.phpmyadmin.net/en/latest/setup.html#docker-environment-variables
       PMA_HOST: db
       PMA_PORT: 3306
-      MYSQL_ROOT_PASSWORD: "db"
+      MYSQL_ROOT_PASSWORD: "pw"
     ports:
       - 8080:80
-    links:
-      - db:db
 
   db:
-    image: mysql:latest # https://hub.docker.com/_/mysql/ - or mariadb https://hub.docker.com/_/mariadb
+    image: mysql:latest
     ports:
       - 3306:3306
     command: [
@@ -25,8 +22,8 @@ services:
     volumes:
       - db_data:/var/lib/mysql
     environment:
-      MYSQL_DATABASE: "user"
-      MYSQL_ROOT_PASSWORD: "db"
+      MYSQL_DATABASE: "metaflop_development"
+      MYSQL_ROOT_PASSWORD: "pw"
 
   metaflop:
     build:
@@ -38,8 +35,7 @@ services:
       - .:/metaflop
     depends_on:
       - db
-    links:
-      - db:db
+    restart: on-failure
 
 volumes:
   db_data:
