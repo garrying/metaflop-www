@@ -1,21 +1,16 @@
-[![Code Climate](https://codeclimate.com/github/metaflop/metaflop-www/badges/gpa.svg)](https://codeclimate.com/github/metaflop/metaflop-www)
-[![Build Status](https://travis-ci.org/metaflop/metaflop-www.svg?branch=master)](https://travis-ci.org/metaflop/metaflop-www)
-[![security](https://hakiri.io/github/metaflop/metaflop-www/dev.svg)](https://hakiri.io/github/metaflop/metaflop-www/dev)
-[![Dependency Status](https://gemnasium.com/metaflop/metaflop-www.svg)](https://gemnasium.com/metaflop/metaflop-www)
-
 # Metaflop
+[![Build Status](https://travis-ci.com/garrying/metaflop-www.svg?branch=master)](https://travis-ci.com/garrying/metaflop-www)
 
 [Metaflop](http://www.metaflop.com) is an easy to use free and open source web application for modulating your own fonts. Metaflop uses [METAFONT](https://en.wikipedia.org/wiki/Metafont), which allows you to easily customize a font within the given parameters and generate a large range of font families with very little effort.
 
-## Wiki
+This is a forked version based on [metaflop/metaflop-www](https://github.com/metaflop/metaflop-www) by Alexis Reigel and Marco Müller. The main update in this version is the tooling, and database, are in Docker containers. The goal is to provide a reproducible environment for Modulator.
 
-Visit our [wiki](https://github.com/metaflop/metaflop-www/wiki) for:
-
-- more [general information](https://github.com/metaflop/metaflop-www/wiki/About) about the project
-- how to contribute as a [developer](https://github.com/metaflop/metaflop-www/wiki/Developer-Guide)
-- how to install and work with METAFONT as a [designer](https://github.com/metaflop/metaflop-www/wiki/METAFONT-for-Designers)
-- how to contribute [your METAFONT](https://github.com/metaflop/metaflop-www/wiki/Contribute-a-MF-to-Metaflop) to Metaflop
-- [what licenses](https://github.com/metaflop/metaflop-www/wiki/License) for the source code and fonts are used
+## Installation
+- Install [Docker Compose](https://docs.docker.com/compose/install/)
+- Clone the repository: `git clone git@github.com:garrying/metaflop-www.git && cd metaflop-www`
+- Create a `db.yml` from the sample: `cp ./config/db.yml.sample ./config/db.yml`
+- Run Docker Compose: `docker-compose up`
+- After the containers are built and running, visit `http://127.0.0.1:9292`
 
 ## License
 
