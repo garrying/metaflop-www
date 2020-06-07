@@ -8,6 +8,7 @@ This is a forked version based on [metaflop/metaflop-www](https://github.com/met
 ## Installation
 - Install [Docker Compose](https://docs.docker.com/compose/install/)
 - Clone the repository: `git clone git@github.com:garrying/metaflop-www.git && cd metaflop-www`
+- Clone submodules (Metaflop fonts): `git submodule update --init --recursive`
 - Create a `db.yml` from the sample: `cp ./config/db.yml.sample ./config/db.yml`
 - Run Docker Compose: `docker-compose up`
 - After the containers are built and running, visit `http://127.0.0.1:9292`
